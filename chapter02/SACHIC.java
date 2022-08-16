@@ -1,0 +1,11 @@
+package chapter02;
+
+import java.util.Scanner;
+
+public class SACHIC {
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String ID = scanner.nextLine();
+        System.out.println(ID + "??!");
+    }
+}
