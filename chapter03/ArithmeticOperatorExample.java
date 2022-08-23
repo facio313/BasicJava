@@ -23,5 +23,10 @@ public class ArithmeticOperatorExample {
 		double result6 = (double) v1 / v2;
 		System.out.println("result6=" + result6);
 		
+		int result7 = 4*10%7;
+		int result8 = 10%7*4;
+		
+		System.out.println(result7);
+		System.out.println(result8);
 	}
 }

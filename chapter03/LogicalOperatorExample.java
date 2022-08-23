@@ -25,5 +25,13 @@ public class LogicalOperatorExample {
 		if( (value%2==0) || (value%3==0) ) {
 			System.out.println("2 또는 3의 배수군요");
 		}
+		
+		char a = '홍';
+		char b = '김';
+		if ( a < b ) {
+			System.out.println("홍이 김보다 작음");
+		} else {
+			System.out.println("김이 홍보다 작음");			
+		}
 	}
 }
