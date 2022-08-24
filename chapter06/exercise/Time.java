@@ -5,13 +5,13 @@ public class Time {
 	private int minute;
 	private int second;
 
-	Time() {
-		hour = 0;
-		minute = 0;
-		second = 0;
+	public Time() {
+//		this.hour = 0;
+//		this.minute = 0;
+//		this.second = 0; //안 써도 됨!
 	}
 
-	Time(int hour, int minute, int second) {
+	public Time(int hour, int minute, int second) {
 		if (hour < 0 || hour > 23) {
 			hour = 0;
 		}
@@ -26,7 +26,7 @@ public class Time {
 		this.second = second;
 	}
 
-	public String toString() {
+	public String toString() { // 공통으로 사용하는 메소드! 모든 클래스가 다 갖고 있음
 		return String.format("%02d:%02d:%02d", hour, minute, second);
 	}
 }

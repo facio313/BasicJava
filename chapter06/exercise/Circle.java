@@ -17,8 +17,8 @@ public class Circle {
 	public void setRadius(double radius) {
 		if (radius > 0) {
 			this.radius = radius;
-		} else {
-			radius = 0;
+//		} else {
+//			radius = 0;	//여기 두 개는 안 써도 도
 		}
 	}
 

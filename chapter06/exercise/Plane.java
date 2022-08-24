@@ -7,11 +7,13 @@ public class Plane {
 	private static int numberOfPlanes;
 
 	public Plane() {
-		manufacturer = "";
-		model = "";
-		maxNumberOfPassengers = 0;
+//		manufacturer = "";
+//		model = "";
+//		maxNumberOfPassengers = 0; //없어도 됨 기본 생성자는 다 초기값 / 생성자에서 초기화하는 거 안 됨
 		numberOfPlanes++;
 	}
+
+//	alt shift s -> generate constructor using fields -> 체크할 거 하거 omit 어쩌고 확인
 
 	public Plane(String manufacturer, String model, int maxNumberOfPassengers) {
 		this.manufacturer = manufacturer;
