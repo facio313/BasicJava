@@ -8,7 +8,7 @@ public class BreakOutterExample {
 		System.out.print("생략할 곱하기: ");
 		int dan = scanner.nextInt();
 		
-		Outter: for (int i = 2; i <= 9; i++) {
+		for (int i = 2; i <= 9; i++) {
 //			System.out.println(i + "단");
 			System.out.println("");
 			for (int j = 1; j <= 9; j++) {
