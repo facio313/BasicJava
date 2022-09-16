@@ -2,6 +2,10 @@ package memo;
 
 import java.sql.Date;
 
+//자바bean 클래스
+//vo는 sql에서 한 행
+//vo가 모이면 list
+//멤버, 생성자 만들기!
 public class MemoVO {
 	private int no;
 	private String title;
@@ -9,13 +13,12 @@ public class MemoVO {
 	private String writer;
 	private Date registerDate;
 	private Date modifyDate;
-	
-	
-	//생성자 오버로딩. 자바빈즈 패턴. 텔레스코프
+
+	// 생성자 오버로딩. 자바빈즈 패턴. 텔레스코프
 	public MemoVO() {
-	
+
 	}
-	
+
 	public MemoVO(int no) {
 		this.no = no;
 	}
@@ -25,7 +28,7 @@ public class MemoVO {
 		this.content = content;
 		this.writer = writer;
 	}
-	
+
 	public MemoVO(int no, String title, String content, String writer) {
 		this.no = no;
 		this.title = title;

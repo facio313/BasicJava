@@ -5,6 +5,7 @@ import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +13,14 @@ import java.util.List;
 import oracle.jdbc.driver.OracleDriver;
 
 // Database Access Object
+// Service와 DB 사이에서 데이터를 전달(VO에 담아서)
+// 싱글톤(메모리에 한 번 생성하여 공유해서 사용) 객체 생성
+//	private static BookDAO instance = new BookDAO();
+//	private BookDAO() {}
+//	public static BookDAO getInstance() {
+//		return instance;
+//	}
+
 public class MemoDAO { // dao는 데이터베이스에 직접 접촉해 읽고 쓰고 하는것
 //	public static void main(String[] args) throws Exception { //테스트
 //		MemoDAO dao = new MemoDAO();
@@ -63,7 +72,7 @@ public class MemoDAO { // dao는 데이터베이스에 직접 접촉해 읽고 �
 		return list;
 	}
 
-	public MemoVO getMemo(int searchNo) {
+	public MemoVO getMemo(int searchNo) throws Exception {
 		// 0. 드라이버 로딩
 		// Class.forName("oracle.jdbc.driver.OracleDriver");
 		DriverManager.registerDriver(new OracleDriver());
@@ -81,9 +90,9 @@ public class MemoDAO { // dao는 데이터베이스에 직접 접촉해 읽고 �
 		builder.append("    register_date, ");
 		builder.append("    modify_date ");
 		builder.append("FROM ");
-		builder.append("FROM ");
-		builder.append("WHERE ");
 		builder.append("    memo ");
+		builder.append("WHERE ");
+		builder.append("    no = ? ");
 
 		String sql = builder.toString();
 
@@ -94,14 +103,18 @@ public class MemoDAO { // dao는 데이터베이스에 직접 접촉해 읽고 �
 		// 4. 쿼리 실행
 		ResultSet resultSet = statement.executeQuery();
 
-		// 5. 
-		int no = resultSet.getInt("no");
-		String title = resultSet.getString("title");
-		String content = resultSet.getString("content");
-		String writer = resultSet.getString("writer");
-		Date registerDate = resultSet.getDate("register_date");
-		Date modifyDate = resultSet.getDate("modify_date");
-		
+		// 5. 쿼리 결과 가져오기
+		MemoVO vo = null;
+		if (resultSet.next()) {
+			int no = resultSet.getInt("no");
+			String title = resultSet.getString("title");
+			String content = resultSet.getString("content");
+			String writer = resultSet.getString("writer");
+			Date registerDate = resultSet.getDate("register_date");
+			Date modifyDate = resultSet.getDate("modify_date");
+			vo = new MemoVO(no, title, content, writer, registerDate, modifyDate);
+		}
+
 		// 6. 자원 반납
 		resultSet.close();
 		statement.close();

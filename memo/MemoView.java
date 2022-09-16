@@ -18,9 +18,9 @@ public class MemoView {
 		}
 	}
 	
-	public void viewDetailMemo(MemoController controller, Scanner scanner) {
-		System.out.println("보고 싶은 메모 번호 입력: ");
-		int no = Integer.parseInt(scanner.nextLine());
+	public void viewDetailMemo(MemoController controller, Scanner scanner) throws Exception {
+		System.out.print("보고 싶은 메모 번호 입력: ");
+		int searchNo = Integer.parseInt(scanner.nextLine());
 		MemoVO vo = controller.getMemo(searchNo);
 		System.out.println(vo);
 	}

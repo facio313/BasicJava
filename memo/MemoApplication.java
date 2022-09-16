@@ -18,6 +18,7 @@ public class MemoApplication {
 				view.viewMemos(memoController);
 				break;
 			case 2: // 메모 한 개
+				view.viewDetailMemo(memoController, scanner);
 				break;
 			case 3: // 등록
 				view.insertMemo(memoController, scanner);
