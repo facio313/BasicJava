@@ -1,0 +1,6 @@
+package bookstore.common;
+
+//공통모듈(common module) 어디서든 접근하여 사용 가능
+public class ScannerUtil {
+	
+}

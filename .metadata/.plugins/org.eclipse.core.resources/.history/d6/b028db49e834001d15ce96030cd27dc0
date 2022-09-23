@@ -1,0 +1,25 @@
+package check;
+
+import java.util.List;
+import java.util.Scanner;
+
+public class CheckView {
+	public void init() {
+		System.out.println("1.예약하기|2.예약 목록|3.예약 취소|4.종료");
+		System.out.print("메뉴를 입력하세요: ");
+	}
+	
+	public void viewCheck(CheckController controller) throws Exception {
+		List<CheckVO> list = controller.checkRes();
+		for (CheckVO vo : list) {
+			System.out.println(vo);
+		}
+	}
+	
+	public void viewCheck(CheckController controller, Scanner scanner) throws Exception {
+		System.out.print("보고 싶은 예약 번호 입력: ");
+		String typeReservId = scanner.nextLine();
+		CheckVO vo = controller.checkRes(typeReservId);
+		System.out.println(vo);
+	}
+}

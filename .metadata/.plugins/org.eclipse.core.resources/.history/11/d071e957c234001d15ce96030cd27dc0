@@ -1,0 +1,22 @@
+package check;
+
+import java.sql.Date;
+
+public class CheckVO {
+	private String reserv_id;
+	private String mem_id;
+	private String pass_name;
+	private String pass_phone;
+	private String pass_reg;
+	private String seat_no;
+	private Date course_dd;
+	private Date course_dt;
+	private String course_dl;
+	private String airport_id;
+	private String airplane_id;
+	private int course_price;
+	private int mem_account;
+	private String mem_bank;
+	private int mem_mileage;
+
+}

@@ -1,0 +1,16 @@
+package check;
+
+import java.util.List;
+
+public class CheckSerivce {
+	CheckDAO dao = new CheckDAO();
+
+	public List<CheckVO> checkRes() throws Exception {
+		return dao.checkList(memId);
+	}
+
+	public CheckVO checkRes(String typeReservId) throws Exception {
+		return dao.checkRes(typeReservId);
+	}
+
+}

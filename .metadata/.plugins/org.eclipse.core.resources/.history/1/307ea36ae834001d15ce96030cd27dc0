@@ -1,0 +1,28 @@
+package check;
+
+import java.util.Scanner;
+
+public class CheckApplication {
+	public static void main(String[] args) {
+		CheckView view = new CheckView();
+		Scanner scanner = new Scanner(System.in);
+		CheckController checkController = new CheckController();
+		
+		menu: while (true) {
+			System.out.println("-----------------------------");
+			view.init();
+			int menu = Integer.parseInt(scanner.nextLine());
+			switch (menu) {
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				System.out.println("프로그램을 종료합니다.");
+				break menu;
+			}
+		}
+	}
+}

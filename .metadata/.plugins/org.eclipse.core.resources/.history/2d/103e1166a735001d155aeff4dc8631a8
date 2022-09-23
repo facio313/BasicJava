@@ -1,0 +1,10 @@
+package bookstore;
+
+public class BookStoreView {
+	//싱글톤 패턴 객체 생성
+	private static BookStoreView instance = new BookStoreView();
+	private BookStoreView() {}
+	public static BookStoreView getInstance() {
+		return instance;
+	}
+}

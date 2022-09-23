@@ -1,0 +1,7 @@
+package check;
+
+public class CheckView {
+	public void init() {
+		System.out.println("1.예약하기|2.예약 목록|3.예약 취소|4.종료");
+	}
+}

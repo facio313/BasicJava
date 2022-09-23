@@ -1,0 +1,29 @@
+package bookstore;
+
+import java.util.Scanner;
+
+import bookstore.common.HomeMenu;
+import bookstore.common.ScannerUtil;
+
+//View : 사용자가 보는 화면
+public class BookStoreView {
+	//싱글톤 패턴 객체 생성
+	private static BookStoreView instance = new BookStoreView();
+	private BookStoreView() {}
+	public static BookStoreView getInstance() {
+		return instance;
+	}
+	
+	//스캐너 객체 생성
+	private Scanner scanner = ScannerUtil.scanner();
+	
+	//환영인사
+	public int init() {
+		//맨 처음에 보여줌
+		System.out.println("개똥이 책방에 오신 것을 환영합니다.");
+		//HomeMenu 클래스로 처리
+		System.out.println(HomeMenu.HOME.getMenuString());
+		//8, 2, 0 중 하나 선택
+		return scanner.nextInt();
+	}
+}

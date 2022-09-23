@@ -1,0 +1,13 @@
+package bookstore;
+
+import book.BookController;
+
+//...View와...Controller 사이에 연결해주는 클래스
+public class Home {
+	//연결대상1 : Controller 주입(inject)
+	private BookController bookController = BookController.getInstance();
+	
+	//연결대상2 : View 주입(inject)
+	private BookStoreView View = BookStoreView.getInstance()
+
+}

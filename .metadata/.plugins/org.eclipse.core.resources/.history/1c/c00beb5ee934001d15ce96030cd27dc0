@@ -1,0 +1,42 @@
+package check;
+
+import java.sql.Date;
+
+public class CheckVO {
+	private String reservId;
+	private String memId;
+	private String passName;
+	private String passPhone;
+	private String passReg;
+	private String seatNo;
+	private Date courseDd;
+	private Date courseDt;
+	private String courseDl;
+	private String airportId;
+	private String airplaneId;
+	private int coursePrice;
+	private int memAccount;
+	private String memBank;
+	private int memMileage;
+
+	public CheckVO(String reservId, String memId, String passName, String passPhone, String passReg, String seatNo,
+			Date courseDd, Date courseDt, String courseDl, String airportId, String airplaneId, int coursePrice,
+			int memAccount, String memBank, int memMileage) {
+		this.reservId = reservId;
+		this.memId = memId;
+		this.passName = passName;
+		this.passPhone = passPhone;
+		this.passReg = passReg;
+		this.seatNo = seatNo;
+		this.courseDd = courseDd;
+		this.courseDt = courseDt;
+		this.courseDl = courseDl;
+		this.airportId = airportId;
+		this.airplaneId = airplaneId;
+		this.coursePrice = coursePrice;
+		this.memAccount = memAccount;
+		this.memBank = memBank;
+		this.memMileage = memMileage;
+	}
+
+}

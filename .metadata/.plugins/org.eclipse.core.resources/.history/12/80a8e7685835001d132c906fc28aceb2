@@ -1,0 +1,56 @@
+package check;
+
+import java.sql.Date;
+
+public class CheckVO {
+	private String reservId;
+	private String memId;
+	private String passName;
+	private String passPhone;
+	private String passReg;
+	private String seatNo;
+	private String depLocation;
+	private Date depDate;
+	private Date depTime;
+	private String airportId;
+	private Date arrTime;
+	private String airplaneId;
+	private int price;
+	private int account;
+	private String bank;
+	private int mileage;
+
+	public CheckVO(String reservId, String passName, String seatNo, String depLocation, Date depDate, Date depTime,
+			String airportId, Date arrTime, String airplaneId) {
+		this.reservId = reservId;
+		this.passName = passName;
+		this.seatNo = seatNo;
+		this.depLocation = depLocation;
+		this.depDate = depDate;
+		this.depTime = depTime;
+		this.airportId = airportId;
+		this.arrTime = arrTime;
+		this.airplaneId = airplaneId;
+	}
+
+	public CheckVO(String reservId, String memId, String passName, String passPhone, String passReg, String seatNo,
+			String depLocation, Date depDate, Date depTime, String airportId, Date arrTime, String airplaneId, int price, int account,
+			String bank, int mileage) {
+		this.reservId = reservId;
+		this.memId = memId;
+		this.passName = passName;
+		this.passPhone = passPhone;
+		this.passReg = passReg;
+		this.seatNo = seatNo;
+		this.depLocation = depLocation;
+		this.depDate = depDate;
+		this.depTime = depTime;
+		this.airportId = airportId;
+		this.arrTime = arrTime;
+		this.airplaneId = airplaneId;
+		this.price = price;
+		this.account = account;
+		this.bank = bank;
+		this.mileage = mileage;
+	}
+}

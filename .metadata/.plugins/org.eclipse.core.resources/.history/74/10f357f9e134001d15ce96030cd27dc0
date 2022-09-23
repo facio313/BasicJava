@@ -1,0 +1,8 @@
+package check;
+
+public class CheckSerivce {
+	CheckDAO dao = new CheckDAO();
+	public List<CheckVO> checkRes() {
+		return dao.checkRes();
+	}
+}

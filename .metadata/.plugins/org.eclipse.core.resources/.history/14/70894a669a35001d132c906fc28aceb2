@@ -1,0 +1,6 @@
+package book;
+//Service와 DB사이에서 데이터를 전달(VO에 담아서..)
+public class BookDAO {
+//싱글톤(메모리에 한 번 생성하여 공유하여 사용) 객체 생성
+	private static BookDAO instance 
+}

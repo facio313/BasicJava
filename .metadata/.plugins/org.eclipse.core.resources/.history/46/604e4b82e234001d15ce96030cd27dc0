@@ -1,0 +1,17 @@
+package check;
+
+import java.util.List;
+
+public class CheckController {
+	CheckDAO dao = new CheckDAO();
+
+	public List<CheckVO> checkRes() throws Exception {
+		return dao.checkRes();
+	}
+
+	public CheckVO checkRes(String reservId) throws Exception {
+		return dao.checkRes(reservId);
+	}
+
+}
+}

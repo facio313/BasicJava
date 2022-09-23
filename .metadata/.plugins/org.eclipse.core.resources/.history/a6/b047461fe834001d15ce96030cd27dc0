@@ -1,0 +1,15 @@
+package check;
+
+import java.util.Scanner;
+
+public class CheckApplication {
+	public static void main(String[] args) {
+		CheckView view = new CheckView();
+		Scanner scanner = new Scanner(System.in);
+		CheckController checkController = new CheckController();
+		
+		menu: while (true) {
+			System.out.println("-----------------------------");
+		}
+	}
+}

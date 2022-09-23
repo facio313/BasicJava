@@ -1,0 +1,33 @@
+package memo;
+
+import java.util.InputMismatchException;
+
+import teamProject.utils.ClearConsole;
+import teamProject.utils.ScanUtil;
+
+public class TryCatchTest {
+
+	public static void main(String[] args) {
+		try {
+			System.out.println("1. 베이징");
+			System.out.println("2. 동경");
+			System.out.println("3. 하노이");
+			System.out.print("도착지 선택 >> ");
+			ClearConsole.spaceGap33(); // sss
+			country = ScanUtil.nextInt();
+			if (country == 1 || country == 2 || country == 3) {
+				break;
+			} else {
+				System.out.println("잘못된 입력입니다. 다시 입력해주세요");
+			}
+		} catch (InputMismatchException ie) {
+			System.out.println("잘못된 입력입니다. 다시 입력해주세요");
+		} catch (Exception e) {
+			System.out.println("오류 발생 : ");
+			e.printStackTrace();
+			break;
+		}
+	}
+	}
+
+}
